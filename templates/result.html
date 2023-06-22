@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<title> Search Results </title>
+
+{% endblock head %}
+
+{% block body %}
+
+{% for key, value in data.items %}
+
+<div>
+
+    <h5 class="text-2xl font-normal leading-normal mt-5 mb-2 px-5 py-5 text-pink-800"> {{key}} </h5> 
+
+    <div>
+    {%for k, v in value %}
+    <p class="px-10"> {{k}} : {{v}} </p>
+    
+    {%endfor%}
+    </div>
+
+</div>
+
+
+
+{% endfor %}
+
+{% endblock body %}
